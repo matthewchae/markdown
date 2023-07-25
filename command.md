@@ -2,6 +2,8 @@
 [SSH](#ssh)
 [core_dump](#core_dump)
 [systemd](#systemd)
+[systemd2](#systemd1)
+[systemd1](#systemd2)
 ## 소개
 
 Github pages 블로그를 운영하는 중입니다. 회사라는 틀에 박혀 찍어내기식 프로그래밍에 지친 나머지 블로그에서만큼은 제가 하고 싶은 프로젝트를 진행하고 싶어 만들게 되었습니다. 
@@ -41,6 +43,19 @@ Core dump 발생시키기
 
 
 #systemd
+systemd-analyze time
+systemctl restart systemd-journald
+$systemctl daemon-reload
+$systemctl restart packagemanager-cgi
+
+
+#systemd1
+systemd-analyze time
+systemctl restart systemd-journald
+$systemctl daemon-reload
+$systemctl restart packagemanager-cgi
+
+#systemd2
 systemd-analyze time
 systemctl restart systemd-journald
 $systemctl daemon-reload
