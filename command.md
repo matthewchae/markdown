@@ -343,7 +343,7 @@ Yocto에서는 PN의 이름이 동일한 경우 PV가 높은 것을 자동 적�
 ${PN}_${PV}.bb
 
 bbexample_0.0.1.bb 
-Bbexample_0.0.1.bbappend
+Bbexample_0.0.1.bbappend<br><br><br><br>  
 
 
 <a name="directory"></a>  
