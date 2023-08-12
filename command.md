@@ -1,7 +1,7 @@
 
 [ssh](#ssh)
 
-[ssh](#systemd)
+[systemd](#systemd)
 
 [core_dump](#core_dump)
  
