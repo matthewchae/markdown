@@ -13,6 +13,58 @@
 
 [find](#find)
 
+
+<a name="Linux"></a>  
+### Linux
+
+netstat -ntl 이게 열려 있는 포트를 보여준다.<br><br><br><br> 
+
+Obj dump해보기<br><br> 
+/tmp/work/mips-poky-linux/systemd/1_24=r0/image/usr/bin여기에서<br><br> 
+readelf a systemctl | less<br><br><br><br> 
+
+cat /etc/passwd | grep basic<br><br> 
+참고로 어떤 계정들이 있는지는 아래처럼 확인할 수 있다.<br><br> 
+root@axis-00408c18888e:~# cat /etc/passwd<br><br> 
+root:x:0:0:root:/root:/bin/sh<br><br> 
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin<br><br><br><br> 
+
+dd if=/dev/random bs=32 count=1 | hexdump -Cv<br><br> 
+dd if=/dev/zero bs=4096 count=1 | otpsimwrite<br><br> 
+otpsimwrite < datafile<br><br><br><br> 
+
+cat /proc/meminfo<br><br> 
+cat /proc/cmdline<br><br><br><br> 
+
+echo 512 > cpu.shares<br><br> 
+
+stat -fc %T /sys/fs/cgroup/<br><br> 
+for cgroup v2, the output is cgroup2fs.<br><br> 
+for cgroup v1, the output is tmpfs.<br><br><br><br> 
+
+버전 확인<br><br> 
+/usr/share/axis_release<br><br> 
+lsb_release -a<br><br> 
+uname -a<br><br><br><br>  
+
+ls -al | grep xml2<br><br> 
+
+클럭<br><br> 
+cat /sys/class/devfreq/dlp_devfrep/available_frequencies<br><br> 
+이렇게 하면 dlp_devfrep의 변경 가능한 frequency가 나온다.<br><br> 
+이외에 다른걸로는 바뀌지 않는다.<br><br> 
+cat /sys/class/devfreq/dlp_devfreq/cur_freq<br><br>
+cat /sys/class/devfreq/dlp_devfreq/max_freq<br><br><br><br> 
+
+ls –l cat /sys/class/devfreq/dlp_devfreq/max_freq<br><br> 
+echo 300000000 > /sys/class/devfreq/dlp_freq/max_freq<br><br> 
+이렇게 하면 pll이 바뀌는게 아니고 divider가 바뀌나 보다.<br><br><br><br> 
+
+cat /sys/class/devfreq/dlp_devfreq/cur_freq<br><br> 
+cat /sys/kernel/debug/clk/clk_summary<br><br> 
+echo 92 > /sys/class/gpio/export<br><br><br><br> 
+
+
 <a name="devtool,ffbuild"></a>  
 ### devtool/ ffbuild
 
