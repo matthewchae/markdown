@@ -76,18 +76,18 @@ sudo apt-get install axis-netboot
 <a name="ssh"></a>  
 ### ssh
 
-ssh enable하는 법
-http://192.168.0.90/axis-cgi/admin/param.cgi?action=update&Network.SSH.Enabled=yes
-192.168.0.90/axis-cgi/param.cgi?action=update&root.Network.SSH.Enabled=yes
+ssh enable하는 법<br><br> 
+http://192.168.0.90/axis-cgi/admin/param.cgi?action=update&Network.SSH.Enabled=yes<br><br> 
+192.168.0.90/axis-cgi/param.cgi?action=update&root.Network.SSH.Enabled=yes<br><br> 
 
-sshfs이용해서 ~/fractal에 마운트하기
-sshfs christwo@10.92.172.87:/home/christwo/ ~/fractal -o nonempty
+sshfs이용해서 ~/fractal에 마운트하기<br><br> 
+sshfs christwo@10.92.172.87:/home/christwo/ ~/fractal -o nonempty<br><br> 
 
-scp로 파일 전송하기
-scp testfile root@192.168.123.123:/app/tmp/testdir
-scp로 파일 전송받기
-   ->Copy the perf.data from target using scp:
- -> scp root@192.168.0.90:/tmp/perf.data .
+scp로 파일 전송하기<br><br> 
+scp testfile root@192.168.123.123:/app/tmp/testdir<br><br> 
+scp로 파일 전송받기<br><br> 
+&nbsp; &nbsp;&nbsp;&nbsp;->Copy the perf.data from target using scp:<br><br> 
+ &nbsp; &nbsp;&nbsp;&nbsp;-> scp root@192.168.0.90:/tmp/perf.data<br><br> 
 
 
 사용자 변경
