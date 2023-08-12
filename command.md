@@ -11,6 +11,7 @@ Github pages 블로그를 운영하는 중입니다. 회사라는 틀에 박혀 
 [core_dump](#core-dump)
 [systemd](#systemd)
 [systemd1](#systemd1)
+
 [devtool,ffbuild](#devtool,ffbuild)
 
 [boot command](#boot_command)
@@ -40,7 +41,7 @@ $systemctl daemon-reload
 $systemctl restart packagemanager-cgi
 
 
-<a name="boot command"></a>  
+<a name="boot_command"></a>  
 #### boot command
 
 다른 서비스 런 안시키는거
