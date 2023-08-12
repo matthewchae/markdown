@@ -42,14 +42,16 @@ Core dump 발생시키기
 /usr/local/syslog.log   persistent이다. core dump되면 여기에 로그가 남는다.
 
 
-#systemd
+#systemd 
+
 systemd-analyze time
 systemctl restart systemd-journald
 $systemctl daemon-reload
 $systemctl restart packagemanager-cgi
 
 
-#systemd1
+#systemd1 
+
 systemd-analyze time
 systemctl restart systemd-journald
 $systemctl daemon-reload
