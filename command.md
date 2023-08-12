@@ -104,14 +104,14 @@ netstat -ntl 이게 열려 있는 포트를 보여준다.
 <a name="core_dump"></a>  
 ### core dump
 
-Core dump 발생하는거 기다리고 있기.
-https://gittools.se.axis.com/gerrit/plugins/gitiles/apps/dbox/+/refs/heads/master/
--> 옛날 버전에서는 하기 사용
-wget -T0 -O core 'http://root:pass@192.168.0.90/axis-cgi/debug/debug.cgi?listen'
-여기서 debug.cgi대신 debug.tgz 사용
+Core dump 발생하는거 기다리고 있기.<br><br> 
+https://gittools.se.axis.com/gerrit/plugins/gitiles/apps/dbox/+/refs/heads/master/<br><br> 
+-> 옛날 버전에서는 하기 사용<br><br> 
+wget -T0 -O core 'http://root:pass@192.168.0.90/axis-cgi/debug/debug.cgi?listen'<br><br> 
+여기서 debug.cgi대신 debug.tgz 사용<br><br> 
 
-Core dump 발생시키기
--> 타겟에서 dbox segfault하면 에러 발생
+Core dump 발생시키기<br><br> 
+-> 타겟에서 dbox segfault하면 에러 발생<br><br> 
 
 /usr/local/syslog.log   persistent이다. core dump되면 여기에 로그가 남는다.
 
