@@ -154,43 +154,43 @@ cat /etc/passwd | grep basic
 
 <a name="systemd"></a>  
 ### systemd
-systemd-analyze time
-systemctl restart systemd-journald
-$systemctl daemon-reload
-$systemctl restart packagemanager-cgi
+systemd-analyze time<br><br> 
+systemctl restart systemd-journald<br><br> 
+$systemctl daemon-reload<br><br> 
+$systemctl restart packagemanager-cgi<br><br> 
 
-systemctl status init-pkcs11-token : 서비스 확인
+systemctl status init-pkcs11-token : 서비스 확인<br><br> 
 
-systemctl list-units | grep radar-autotracking
-systemctl list-units radar*
-systemctl list-unit-files | grep radar-autotracking
-systemctl list-unit-files radar*
+systemctl list-units | grep radar-autotracking<br><br> 
+systemctl list-units radar*<br><br> 
+systemctl list-unit-files | grep radar-autotracking<br><br> 
+systemctl list-unit-files radar*<br><br> 
 
-systemctl mask 서비스 -> 이렇게 해야 완전히 정지한다.
+systemctl mask 서비스 -> 이렇게 해야 완전히 정지한다.<br><br> 
 
-systemctl list-dependencies radar-scene-provider
-systemctl list-dependencies --reverse radar-scene-provider
+systemctl list-dependencies radar-scene-provider<br><br> 
+systemctl list-dependencies --reverse radar-scene-provider<br><br> 
 
-systemctl mask radar-autotracking.service
-systemctl mask chronyd
-systemctl mask upnp
-systemctl mask video-object-detection.service
-systemctl mask larod
-systemctl mask geolocationd.service
+systemctl mask radar-autotracking.service<br><br> 
+systemctl mask chronyd<br><br> 
+systemctl mask upnp<br><br> 
+systemctl mask video-object-detection.service<br><br> 
+systemctl mask larod<br><br> 
+systemctl mask geolocationd.service<br><br> 
 systemctl mask policykit-parhand.service
 
-systemctl unmask policykit-parhand.service unmassk하고 다시 시작하려면 mask하고 restart해줘라.
-systemctl cat radar-autotracking.service
+systemctl unmask policykit-parhand.service unmassk하고 다시 시작하려면 mask하고 restart해줘라.<br><br> 
+systemctl cat radar-autotracking.service<br><br> 
 
-systemctl list-dependencies –reverse radar-scene-provider.service
+systemctl list-dependencies –reverse radar-scene-provider.service<br><br> 
 
-Systemd로 부팅 plot을 만드는 법
+< Systemd로 부팅 plot을 만드는 법 ><br><br> 
 
-On target: systemd-analyze plot > /etc/httpd/html/plot.svg
+On target: systemd-analyze plot > /etc/httpd/html/plot.svg<br><br> 
 
-In browser: http://<AXIS_TARGET_IP>/local/plot.svg
+In browser: http://<AXIS_TARGET_IP>/local/plot.svg<br><br> 
 
-journalctl -f 하면 로그가 실시간으로 나온다.
+journalctl -f 하면 로그가 실시간으로 나온다.<br><br> 
 
 busctl,<br><br><br><br>
 
