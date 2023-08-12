@@ -192,14 +192,14 @@ In browser: http://<AXIS_TARGET_IP>/local/plot.svg
 
 journalctl -f 하면 로그가 실시간으로 나온다.
 
-busctl,
+busctl,<br><br><br><br>
 
 <a name="bitbake"></a>  
 ### bitbake
 bitbake --show-versions axis-release
 이걸로 glibc가 어떤 버전으로 빌드됐는지 알수 있다.
 
-repo sync &nbsp;&nbsp;-> mainifest같은거 최신버전으로 가져오기
+repo sync &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;-> mainifest같은거 최신버전으로 가져오기
 
 PACKAGECONFIG_append_pn-foobar = " axis-developer"
 Will propagate AXIS_DEVELOPER="y" as a make variable
@@ -211,7 +211,7 @@ Recipe를 작성하다보면 Recipe의 내부변수의 정보를 비롯하여 pr
 
   bbplain "--------    COMPILE DEBUG ${CFLAGS} "
   
-  bb.warn(‘using cgropuv2’)<br><br>
+  bb.warn(‘using cgropuv2’)<br><br><br><br>
 
 
 레시피가 어떻게 연결되어 있는지 확인
