@@ -55,6 +55,30 @@ systemctl restart systemd-journald
 $systemctl daemon-reload
 $systemctl restart packagemanager-cgi
 
+#systemd1
+systemd-analyze time
+systemctl restart systemd-journald
+$systemctl daemon-reload
+$systemctl restart packagemanager-cgi
+
+#systemd1
+systemd-analyze time
+systemctl restart systemd-journald
+$systemctl daemon-reload
+$systemctl restart packagemanager-cgi
+
+#systemd1
+systemd-analyze time
+systemctl restart systemd-journald
+$systemctl daemon-reload
+$systemctl restart packagemanager-cgi
+
+#systemd1
+systemd-analyze time
+systemctl restart systemd-journald
+$systemctl daemon-reload
+$systemctl restart packagemanager-cgi
+
 
 <a name="systemd2"></a>
 #systemd2
