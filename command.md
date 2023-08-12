@@ -35,7 +35,7 @@ $ devtool deploy-target -S -p -c -s packagemanager-cgi root@192.168.0.90
 
 $systemctl daemon-reload
 
-$systemctl restart packagemanager-cgi
+$systemctl restart packagemanager-cgi<br><br><br><br>
 
 
 
@@ -70,7 +70,7 @@ dpkg -i /n/axis_releases/tools/netboot/debian/axis-netboot_3.36.1_amd64.deb
 
 저 위치에 있는걸 설치 하나 보다.
 
-sudo apt-get install axis-netboot
+sudo apt-get install axis-netboot<br><br><br><br>
 
 
 <a name="ssh"></a>  
@@ -98,7 +98,7 @@ ssh-agent 문제일때
    eval $(ssh-agent)
    ssh-add ~/.ssh/id_rsa 입력한다음에 비번인 chae2142입력
 
-netstat -ntl 이게 열려 있는 포트를 보여준다.
+netstat -ntl 이게 열려 있는 포트를 보여준다.<br><br><br><br>
 
 
 <a name="core_dump"></a>  
@@ -114,7 +114,7 @@ Core dump 발생시키기<br><br>
 -> 타겟에서 dbox segfault하면 에러 발생<br><br> 
 
 /usr/local/syslog.log<br><br> 
--> persistent이다. core dump되면 여기에 로그가 남는다.
+-> persistent이다. core dump되면 여기에 로그가 남는다.<br><br><br><br>
 
 <a name="find"></a>  
 ### find
@@ -151,7 +151,7 @@ Find 조건 -exec 실행시킬 명령어
 
 Find로 찾은것을 exec로 어떤 명령을 실행시켜라
 
-cat /etc/passwd | grep basic
+cat /etc/passwd | grep basic<br><br><br><br>
 
 <a name="systemd"></a>  
 ### systemd
