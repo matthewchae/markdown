@@ -8,7 +8,7 @@ Github pages 블로그를 운영하는 중입니다. 회사라는 틀에 박혀 
 * 소소하지만 살면서 얻은 깨달음이나, 개발자로서 경험하고 배웠던 것들을 공유할 예정이니 가끔 들려주시면 감사하겠습니다. :)
 
 [SSH](#ssh)
-[core_dump](#core_dump)
+[core_dump](#core-dump)
 [systemd](#systemd)
 [systemd2](#systemd1)
 [systemd1](#systemd2)
@@ -29,7 +29,7 @@ Scp로 파일 전송받기
 netstat -ntl
 
 
-#core_dump
+#core dump
 Core dump 발생하는거 기다리고 있기.
 https://gittools.se.axis.com/gerrit/plugins/gitiles/apps/dbox/+/refs/heads/master/
 -> 옛날 버전에서는 하기 사용
