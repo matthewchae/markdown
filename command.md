@@ -7,6 +7,8 @@
 
 [boot command](#boot_command)
 
+[find](#find)
+
 <a name="devtool,ffbuild"></a>  
 ### devtool/ ffbuild
 
