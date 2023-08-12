@@ -208,14 +208,18 @@ PACKAGECONFIG_append = " axis-developer"
 
 
 Recipe를 작성하다보면 Recipe의 내부변수의 정보를 비롯하여 print를 해서 보고 싶을 경우가 많을 것이며, 
+
   bbplain "--------    COMPILE DEBUG ${CFLAGS} "
+  
   bb.warn(‘using cgropuv2’)
 
 
 레시피 찾기
+
 ls meta*/recipes*/*/*.bb | grep basic-device
 
 레시피가 어떻게 연결되어 있는지 확인
+
 bitbake-layers show-appends busybox
 
 busybox_1.36.0.bb:
@@ -227,17 +231,20 @@ project/mickledore/cfp-next/builds/p3265/workspace/appends/busybox_1.36.0.bbappe
 
 
 < 빌드된 패키지 확인 방법 >
+
 devtool srctree axis-release
+
 Searching local build-tree in CFP
 Build 디렉토리 밑에 src 디렉토리가 생기고 여기에 빌드되는 소스들에 대한 이름을 볼 수 있다. 버전확인하는거랑 거의 같은 수준아닐까
 	
 Vim tmp/deply/images/p3265/oe-packates.txt  어떤게 빌드됐는지 알 수 있다. busybox1.36같이
 
 find -L $BUILDDIR/src -type f  \( -name '*.c' -o -name '*.cc' -o -name '*.h' \) -a -not -path '*/.git/*' > cfiles.txt
+
 이렇게 하면 모든 파일들이 cfiles.txt에서 찾을 수 있다.
 위 방법은 디렉토리 전체를 찾아다녀야 하니 더 복잡할 듯..이 방법이 더 쉬울듯
 
-레시피를 찾는 방법이다 
+레시피를 찾는 방법이다.
 ctrlpfiles에 레시피들이 적힌다.
 repo forall -c 'git ls-files | sed s#^#$PWD/#' > ctrlpfiles
 
@@ -250,20 +257,30 @@ find . -name "*glibc*.bb"
 
 
 < 변수 확인 방법 >
+
 $ bitbake -e | grep ^IMAGE  //IMAGE 에 연관된 변수 전체확인 
+
 $ bitbake -e | grep ^KERNEL //KERNEL 에 연관된 변수 전체확인 
+
 $ bitbake -e | grep ^IMAGE_INSTALL= 
 
 bitbake -e systemd | sed -n '/# .PACKAGECONFIG /,/^PACKAGECONFIG=/p' > 1  이렇게 하면 PACKAGECONFIG에 추가된거 다 볼 수 있다.
 
 이렇게 하면 dump.txt 에서 maintainer나 recipe같은걸 알 수 있다.
+
 bitbake -e linux-axis-5.15-artpec8 > 1.txt 
+
 bitbake -e foo > dump.txt
+
 grep '^PKGDEST=' dump.txt
 
 Package Name 과 Package Version을 기록하고, *.bb 와 *.bbappend 작성하며, *.bbappend 주로 확장하는 개념으로 주로 Patch할 때 사용한다.
+
 Yocto에서는 PN의 이름이 동일한 경우 PV가 높은 것을 자동 적용하여 실행한다.
+
 (동일한 recipe가 여러개 존재하여도 PV가 높은것을 자동선택)
+
 ${PN}_${PV}.bb
+
 bbexample_0.0.1.bb 
 Bbexample_0.0.1.bbappend
