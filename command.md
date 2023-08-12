@@ -204,19 +204,15 @@ repo sync &nbsp;&nbsp;-> mainifest같은거 최신버전으로 가져오기
 PACKAGECONFIG_append_pn-foobar = " axis-developer"
 Will propagate AXIS_DEVELOPER="y" as a make variable
 local.conf:
-PACKAGECONFIG_append = " axis-developer"
+PACKAGECONFIG_append = " axis-developer"<br><br>
 
 
 Recipe를 작성하다보면 Recipe의 내부변수의 정보를 비롯하여 print를 해서 보고 싶을 경우가 많을 것이며, 
 
   bbplain "--------    COMPILE DEBUG ${CFLAGS} "
   
-  bb.warn(‘using cgropuv2’)
+  bb.warn(‘using cgropuv2’)<br><br>
 
-
-레시피 찾기
-
-ls meta*/recipes*/*/*.bb | grep basic-device
 
 레시피가 어떻게 연결되어 있는지 확인
 
@@ -234,31 +230,34 @@ project/mickledore/cfp-next/builds/p3265/workspace/appends/busybox_1.36.0.bbappe
 
 1. devtool srctree axis-release
 
-   Searching local build-tree in CFP
+&nbsp; &nbsp;&nbsp;    Searching local build-tree in CFP
 Build 디렉토리 밑에 src 디렉토리가 생기고 여기에 빌드되는 소스들에 대한 이름을 볼 수 있다. 버전확인하는거랑 거의 같은 수준아닐까
 	
 2. vim tmp/deply/images/p3265/oe-packates.txt  어떤게 빌드됐는지 알 수 있다. busybox1.36같이
 
 3. find -L $BUILDDIR/src -type f  \( -name '*.c' -o -name '*.cc' -o -name '*.h' \) -a -not -path '*/.git/*' > cfiles.txt
 
-   이렇게 하면 모든 파일들이 cfiles.txt에서 찾을 수 있다. 위 방법은 디렉토리 전체를 찾아다녀야 하니 더 복잡할 듯..이 방법이 더 쉬울듯
+&nbsp; &nbsp;&nbsp;    이렇게 하면 모든 파일들이 cfiles.txt에서 찾을 수 있다. 위 방법은 디렉토리 전체를 찾아다녀야 하니 더 복잡할 듯..이 방법이 더 쉬울듯
 
 4. 레시피를 찾는 방법이다.
    
-   ctrlpfiles에 레시피들이 적힌다.
+ &nbsp; &nbsp;&nbsp;   ctrlpfiles에 레시피들이 적힌다.
    
-   repo forall -c 'git ls-files | sed s#^#$PWD/#' > ctrlpfiles
+&nbsp; &nbsp;&nbsp;    repo forall -c 'git ls-files | sed s#^#$PWD/#' > ctrlpfiles
 
 5. 레시피 찾는법
    
-   [1] matthewc@pc50906-2235> an2pn optee-os                                                                      ~/project/p1468_3/p1468/builds/p1468-xle
+&nbsp; &nbsp;&nbsp; [1] matthewc@pc50906-2235> an2pn optee-os                         &nbsp; &nbsp;&nbsp;        ~/project/p1468_3/p1468/builds/p1468-xle
    
-   os/optee-os:meta-axis-bsp/recipes-psec/optee/optee-os_3.18.0-50.bb
+&nbsp; &nbsp;&nbsp; os/optee-os:meta-axis-bsp/recipes-psec/optee/optee-os_3.18.0-50.bb
 
 6. 레시피 찾는법
    
-   find . -name "*glibc*.bb"<br><br>   
+&nbsp; &nbsp;&nbsp; find . -name "*glibc*.bb"<br><br>   
 
+7. 레시피 찾기
+
+&nbsp; &nbsp;&nbsp; ls meta*/recipes*/*/*.bb | grep basic-device
 
 < 변수 확인 방법 >
 
