@@ -95,6 +95,7 @@ $systemctl restart packagemanager-cgi
 
 devtool status : 빌드 상태 같은것들을 보여준다.
 devtool modify basic-device-info 
+
 ffbuild basic-device-info 
 ffbuild –deploy  root@192.168.0.90 basic-device-info 
 devtool deploy-target recording-indexer root@192.168.0.85
