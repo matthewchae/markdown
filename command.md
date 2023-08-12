@@ -262,11 +262,11 @@ Build 디렉토리 밑에 src 디렉토리가 생기고 여기에 빌드되는 �
 
 < 변수 확인 방법 >
 
-$ bitbake -e | grep ^IMAGE &nbsp; &nbsp; IMAGE 에 연관된 변수 전체확인 
+$ bitbake -e | grep ^IMAGE &nbsp; &nbsp;&nbsp; -> IMAGE 에 연관된 변수 전체확인 
 
-$ bitbake -e | grep ^KERNEL      //KERNEL 에 연관된 변수 전체확인 
+$ bitbake -e | grep ^KERNEL &nbsp; &nbsp;&nbsp; -> KERNEL 에 연관된 변수 전체확인 
 
-$ bitbake -e | grep ^IMAGE_INSTALL= <br><br>
+$ bitbake -e | grep ^IMAGE_INSTALL=
 
 
 
