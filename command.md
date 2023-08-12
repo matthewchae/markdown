@@ -164,7 +164,7 @@ systemctl list-units radar*
 systemctl list-unit-files | grep radar-autotracking
 systemctl list-unit-files radar*
 
-systemctl mask 서비스 이렇게 해야 완전히 정지한다.
+systemctl mask 서비스 -> 이렇게 해야 완전히 정지한다.
 
 systemctl list-dependencies radar-scene-provider
 systemctl list-dependencies --reverse radar-scene-provider
@@ -177,14 +177,15 @@ systemctl mask larod
 systemctl mask geolocationd.service
 systemctl mask policykit-parhand.service
 
-systemctl unmask policykit-parhand.service unmassk하고
-다시 시작하려면 mask하고 restart해줘라.
+systemctl unmask policykit-parhand.service unmassk하고 다시 시작하려면 mask하고 restart해줘라.
 systemctl cat radar-autotracking.service
 
 systemctl list-dependencies –reverse radar-scene-provider.service
 
 Systemd로 부팅 plot을 만드는 법
+
 On target: systemd-analyze plot > /etc/httpd/html/plot.svg
+
 In browser: http://<AXIS_TARGET_IP>/local/plot.svg
 
 journalctl -f 하면 로그가 실시간으로 나온다.
