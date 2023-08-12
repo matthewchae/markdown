@@ -11,7 +11,7 @@ Github pages 블로그를 운영하는 중입니다. 회사라는 틀에 박혀 
 [core_dump](#core-dump)
 [systemd](#systemd)
 [systemd1](#systemd1)
-[devtool/ffbuild](#devtool,ffbuild)
+[devtool,ffbuild](#devtool,ffbuild)
 
 #ssh
 Ssh enable하는 법
@@ -90,7 +90,7 @@ $systemctl restart packagemanager-cgi
 
 
 
-<a name="devtool/ffbuild"></a>
+<a name="devtool,ffbuild"></a>
 systemd-analyze time
 systemctl restart systemd-journald
 $systemctl daemon-reload
