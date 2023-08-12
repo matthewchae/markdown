@@ -266,7 +266,7 @@ $ bitbake -e | grep ^IMAGE  //IMAGE 에 연관된 변수 전체확인
 
 $ bitbake -e | grep ^KERNEL //KERNEL 에 연관된 변수 전체확인 
 
-$ bitbake -e | grep ^IMAGE_INSTALL= 
+$ bitbake -e | grep ^IMAGE_INSTALL= <br><br>
 
 
 
