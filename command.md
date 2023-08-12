@@ -19,7 +19,7 @@
 
 netstat -ntl 이게 열려 있는 포트를 보여준다.<br><br> 
 
-Obj dump해보기<br><br> 
+< Obj dump해보기 ><br><br> 
 /tmp/work/mips-poky-linux/systemd/1_24=r0/image/usr/bin여기에서<br><br> 
 readelf a systemctl | less<br><br>
 
@@ -42,14 +42,14 @@ stat -fc %T /sys/fs/cgroup/<br><br>
 for cgroup v2, the output is cgroup2fs.<br><br> 
 for cgroup v1, the output is tmpfs.<br><br>
 
-버전 확인<br><br> 
+< 버전 확인 ><br><br> 
 /usr/share/axis_release<br><br> 
 lsb_release -a<br><br> 
 uname -a<br><br> 
 
 ls -al | grep xml2<br><br> 
 
-클럭<br><br> 
+< 클럭 ><br><br> 
 cat /sys/class/devfreq/dlp_devfrep/available_frequencies<br><br> 
 이렇게 하면 dlp_devfrep의 변경 가능한 frequency가 나온다.<br><br> 
 이외에 다른걸로는 바뀌지 않는다.<br><br> 
