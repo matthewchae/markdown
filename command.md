@@ -17,7 +17,7 @@ Github pages 블로그를 운영하는 중입니다. 회사라는 틀에 박혀 
 [boot command](#boot_command)
 
 <a name="devtool,ffbuild"></a>  
-#### devtool/ ffbuild
+##### devtool/ ffbuild
 
 devtool status : 빌드 상태 같은것들을 보여준다.
 
@@ -42,7 +42,7 @@ $systemctl restart packagemanager-cgi
 
 
 <a name="boot_command"></a>  
-#### boot command
+##### boot command
 
 다른 서비스 런 안시키는거
 
