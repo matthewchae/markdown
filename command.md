@@ -267,12 +267,11 @@ $ bitbake -e | grep ^KERNEL &nbsp; &nbsp;&nbsp; -> KERNEL 에 연관된 변수 �
 
 $ bitbake -e | grep ^IMAGE_INSTALL=
 
+bitbake -e systemd | sed -n '/# .PACKAGECONFIG /,/^PACKAGECONFIG=/p' > 1 <br><br> 
+&nbsp;&nbsp;&nbsp;&nbsp; -> 이렇게 하면 PACKAGECONFIG에 추가된거 다 볼 수 있다.<br><br>
 
 
-bitbake -e systemd | sed -n '/# .PACKAGECONFIG /,/^PACKAGECONFIG=/p' > 1  이렇게 하면 PACKAGECONFIG에 추가된거 다 볼 수 있다.<br><br>
-
-
-이렇게 하면 dump.txt 에서 maintainer나 recipe같은걸 알 수 있다.
+<이렇게 하면 dump.txt 에서 maintainer나 recipe같은걸 알 수 있다.>
 
 bitbake -e linux-axis-5.15-artpec8 > 1.txt 
 
