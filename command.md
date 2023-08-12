@@ -269,6 +269,7 @@ $ bitbake -e | grep ^KERNEL //KERNEL 에 연관된 변수 전체확인
 $ bitbake -e | grep ^IMAGE_INSTALL= 
 
 
+
 bitbake -e systemd | sed -n '/# .PACKAGECONFIG /,/^PACKAGECONFIG=/p' > 1  이렇게 하면 PACKAGECONFIG에 추가된거 다 볼 수 있다.
 
 
