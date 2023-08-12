@@ -13,6 +13,7 @@
 
 [find](#find)
 
+[directory](#directory)
 <br><br> 
 <a name="Linux"></a>  
 ### Linux
@@ -343,3 +344,91 @@ ${PN}_${PV}.bb
 
 bbexample_0.0.1.bb 
 Bbexample_0.0.1.bbappend
+
+
+<a name="directory"></a>  
+### directory
+
+https://confluence.se.axis.com/display/KERN/Kernel+Review+and+Integration<br><br>
+이거는 컨퓰런스로<br><br>
+
+/var/tmp folder<br><br>
+​bitbake can produce very strange error messages when /var/tmp is full<br><br>
+
+< OPTEE signing ><br><br>
+hexdump -Cv tmp/deploy/images/*/tee.bin<br><br>
+
+< Yocto manual ><br><br>
+https://docs.yoctoproject.org/ref-manual/structure.html<br><br>
+
+build/tmp/work/ : work dir<br><br>
+
+이 안에 D, S, 인스톨 디렉토리가 존재한다.<br><br>
+D : build/tmp/work/helloworld/image <br><br>
+S : build/tmp/work/helloworld-0.1-r0-/<br><br>
+인스톨 폴더 : build/tmp/work/helloworld-0.1-r.0/install<br><br>
+로그 폴더 : build/tmp/work/helloworld-0.1-r.0/temp   <br><br> 
+
+The WORKDIR/image/ directory is where “make install” places its output.<br><br>
+WORKDIR/temp/, which has log files for each task (log.do_*.pid) and contains the scripts BitBake runs for each task (run.do_*.pid).<br><br>
+
+< 커널 소스 ><br><br>
+build/tmp/work-shared/타겟-OS이름/kernel-source<br><br>
+< 컴파일된 object들 >..이 폴더내에도 소스가 있는데 이건 위 커널 소스 심볼릭링크<br><br>
+build/tmp/work/이름들/build<br><br>
+
+< 커널 컨피그도 그래서 여기서 확인 ><br><br>
+tmp/work-shared/*/kernel-build-artifacts/.config <br><br>
+
+< License 위치 ><br><br>
+/meta-axis-bsp/licenses<br><br>
+
+< fimage의 구성요소 정의 ><br><br>
+class/image_fimage.bbclass : <br><br>
+IMAGE_INSTALL_append : “secureos”<br><br>
+
+build/tmp/deploy/images/<br><br>
+This directory is populated with the basic output objects of the build (think of them as the “generated artifacts” of the build process), including things like the boot loader image, kernel, root filesystem <br><br>
+
+< fimage위치 ><br><br>
+build/grizzly/tmp/deploy/images/grizzly/axis-image-cvp-grizzly.fimage<br><br>
+< rpm 위치 ><br><br>
+/tmp/deploy/rpm/cortexa53_crypto-poky-linux/pkcs11/1.0-r0/image/<br><br>
+< 서비스 위치 ><br><br>
+/tmp/work/grizzly-poky-linux/axis-image-minimal/1.0-4.0/rootfs/usr/lib/systemd/system/init-pkcs11-token.service<br><br>
+
+
+< 패키지별 object위치 ><br><br>
+/build/remington/workspace/source/optee-os/out/arm-plat-ambarella/ta/derived_keys<br><br>
+
+< 패키지별 yocto work dir ><br><br>
+/build/remington/workspace/source/optee-os/oe-workdir<br><br>
+
+
+core dump analyzer, core dump file, kibana<br><br>
+/mnt/storage/project/p3265/p3265/builds/p3265/sysroot-dbg.axis-image-cvp/usr/sbin/basic-device-info -> 실제코드?<br><br>
+/mnt/storage/projet/rootfs_tmp/usr/sbin/basic-device-info -> binary<br><br>
+
+
+< Build 상황 확인 oe-logs이용 ><br><br>
+project/q1656-dle3/q1656-dle/builds/q1656-dle/workspace/sources/busybox/oe-logs<br><br>
+
+< 패키지 빌드 상태 확인 ><br><br>
+vim tmp/deploy/images/p3265/oe-packages.txt <br><br>
+
+/mnt/storage/project/p3265/p3265/builds/p3265/sysroot-dbg.axis-image-cvp/usr/sbin/basic-device-info -> 실제코드?<br><br>
+/mnt/storage/projet/rootfs_tmp/usr/sbin/basic-device-info -> binary<br><br>
+
+< Build-time에 파일이 있는지 확인방법 ><br><br>
+tmp/work/*/systemd/*/recipe-sysroot. <br><br>
+
+
+< Ko 파일 ><br><br>
+/usr/lib/modules/<br><br>
+
+< Persistent log ><br><br>
+/usr/local/syslog.log   <br><br>
+
+< SoC별 config ><br><br>
+/meta-axis-bsp/conf/machine/include<br><br>
+
