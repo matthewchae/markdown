@@ -10,8 +10,8 @@ Github pages 블로그를 운영하는 중입니다. 회사라는 틀에 박혀 
 [SSH](#ssh)
 [core_dump](#core-dump)
 [systemd](#systemd)
-[systemd2](#systemd1)
-[systemd1](#systemd2)
+[systemd1](#systemd1)
+[systemd2](#systemd2)
 
 #ssh
 Ssh enable하는 법
@@ -55,6 +55,8 @@ systemctl restart systemd-journald
 $systemctl daemon-reload
 $systemctl restart packagemanager-cgi
 
+
+<a name="systemd2"></a>
 #systemd2
 systemd-analyze time
 systemctl restart systemd-journald
