@@ -257,7 +257,7 @@ Build 디렉토리 밑에 src 디렉토리가 생기고 여기에 빌드되는 �
 
 7. 레시피 찾기
 
-&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; ls meta*/recipes*/*/*.bb | grep basic-device
+&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; ls meta*/recipes*/*/*.bb | grep basic-device <br><br>
 
 < 변수 확인 방법 >
 
