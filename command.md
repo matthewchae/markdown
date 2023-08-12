@@ -42,7 +42,6 @@ $systemctl restart packagemanager-cgi
 
 <a name="boot command"></a>  
 #### boot command
-< boot command > 
 
 다른 서비스 런 안시키는거
 
