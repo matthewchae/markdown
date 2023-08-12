@@ -57,27 +57,27 @@ systemctl restart systemd-journald
 $systemctl daemon-reload
 $systemctl restart packagemanager-cgi
 
-#systemd4
+#systemd4 
 systemd-analyze time
 systemctl restart systemd-journald
 $systemctl daemon-reload
 $systemctl restart packagemanager-cgi
 
-#systemd5
+#systemd5 
 systemd-analyze time
 systemctl restart systemd-journald
 $systemctl daemon-reload
 $systemctl restart packagemanager-cgi 
 
 
-#systemd6
+#systemd6 
 systemd-analyze time
 systemctl restart systemd-journald
 $systemctl daemon-reload
 $systemctl restart packagemanager-cgi 
 
 
-#systemd7
+#systemd7 
 systemd-analyze time
 systemctl restart systemd-journald
 $systemctl daemon-reload
