@@ -247,16 +247,16 @@ Build 디렉토리 밑에 src 디렉토리가 생기고 여기에 빌드되는 �
    
    ctrlpfiles에 레시피들이 적힌다.
    
-   epo forall -c 'git ls-files | sed s#^#$PWD/#' > ctrlpfiles
+   repo forall -c 'git ls-files | sed s#^#$PWD/#' > ctrlpfiles
 
-6. 레시피 찾는법
+5. 레시피 찾는법
    
    [1] matthewc@pc50906-2235> an2pn optee-os                                                                      ~/project/p1468_3/p1468/builds/p1468-xle
    
    os/optee-os:meta-axis-bsp/recipes-psec/optee/optee-os_3.18.0-50.bb
 
-7. 레시피 찾는법
-8. 
+6. 레시피 찾는법
+   
    find . -name "*glibc*.bb"<br><br>   
 
 
