@@ -227,7 +227,7 @@ project/mickledore/cfp-next/meta-poky/recipes-core/busybox/busybox_%.bbappend
 project/mickledore/cfp-next/meta-clang/recipes-core/busybox/busybox_1.36%.bbappend
 project/mickledore/cfp-next/meta-virtualization/recipes-core/busybox/busybox_%.bbappend
 project/mickledore/cfp-next/meta-axis/recipes-system/busybox/busybox_%.bbappend
-project/mickledore/cfp-next/builds/p3265/workspace/appends/busybox_1.36.0.bbappend
+project/mickledore/cfp-next/builds/p3265/workspace/appends/busybox_1.36.0.bbappend<br><br>
 
 
 < 빌드된 패키지 확인 방법 >
@@ -237,7 +237,7 @@ project/mickledore/cfp-next/builds/p3265/workspace/appends/busybox_1.36.0.bbappe
    Searching local build-tree in CFP
 Build 디렉토리 밑에 src 디렉토리가 생기고 여기에 빌드되는 소스들에 대한 이름을 볼 수 있다. 버전확인하는거랑 거의 같은 수준아닐까
 	
-2. Vim tmp/deply/images/p3265/oe-packates.txt  어떤게 빌드됐는지 알 수 있다. busybox1.36같이
+2. vim tmp/deply/images/p3265/oe-packates.txt  어떤게 빌드됐는지 알 수 있다. busybox1.36같이
 
 3. find -L $BUILDDIR/src -type f  \( -name '*.c' -o -name '*.cc' -o -name '*.h' \) -a -not -path '*/.git/*' > cfiles.txt
 
