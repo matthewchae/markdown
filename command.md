@@ -232,28 +232,32 @@ project/mickledore/cfp-next/builds/p3265/workspace/appends/busybox_1.36.0.bbappe
 
 < 빌드된 패키지 확인 방법 >
 
-devtool srctree axis-release
+1. devtool srctree axis-release
 
-Searching local build-tree in CFP
+   Searching local build-tree in CFP
 Build 디렉토리 밑에 src 디렉토리가 생기고 여기에 빌드되는 소스들에 대한 이름을 볼 수 있다. 버전확인하는거랑 거의 같은 수준아닐까
 	
-Vim tmp/deply/images/p3265/oe-packates.txt  어떤게 빌드됐는지 알 수 있다. busybox1.36같이
+2. Vim tmp/deply/images/p3265/oe-packates.txt  어떤게 빌드됐는지 알 수 있다. busybox1.36같이
 
-find -L $BUILDDIR/src -type f  \( -name '*.c' -o -name '*.cc' -o -name '*.h' \) -a -not -path '*/.git/*' > cfiles.txt
+3. find -L $BUILDDIR/src -type f  \( -name '*.c' -o -name '*.cc' -o -name '*.h' \) -a -not -path '*/.git/*' > cfiles.txt
 
-이렇게 하면 모든 파일들이 cfiles.txt에서 찾을 수 있다.
-위 방법은 디렉토리 전체를 찾아다녀야 하니 더 복잡할 듯..이 방법이 더 쉬울듯
+   이렇게 하면 모든 파일들이 cfiles.txt에서 찾을 수 있다. 위 방법은 디렉토리 전체를 찾아다녀야 하니 더 복잡할 듯..이 방법이 더 쉬울듯
 
-레시피를 찾는 방법이다.
-ctrlpfiles에 레시피들이 적힌다.
-repo forall -c 'git ls-files | sed s#^#$PWD/#' > ctrlpfiles
+4. 레시피를 찾는 방법이다.
+   
+   ctrlpfiles에 레시피들이 적힌다.
+   
+   epo forall -c 'git ls-files | sed s#^#$PWD/#' > ctrlpfiles
 
-레시피 찾는법
-[1] matthewc@pc50906-2235> an2pn optee-os                                                                      ~/project/p1468_3/p1468/builds/p1468-xle
-os/optee-os:meta-axis-bsp/recipes-psec/optee/optee-os_3.18.0-50.bb
+6. 레시피 찾는법
+   
+   [1] matthewc@pc50906-2235> an2pn optee-os                                                                      ~/project/p1468_3/p1468/builds/p1468-xle
+   
+   os/optee-os:meta-axis-bsp/recipes-psec/optee/optee-os_3.18.0-50.bb
 
-레시피 찾는법
-find . -name "*glibc*.bb"   
+7. 레시피 찾는법
+8. 
+   find . -name "*glibc*.bb"   
 
 
 < 변수 확인 방법 >
