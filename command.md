@@ -76,7 +76,7 @@ sudo apt-get install axis-netboot
 <a name="ssh"></a>  
 ### ssh
 
-Ssh enable하는 법
+ssh enable하는 법
 http://192.168.0.90/axis-cgi/admin/param.cgi?action=update&Network.SSH.Enabled=yes
 192.168.0.90/axis-cgi/param.cgi?action=update&root.Network.SSH.Enabled=yes
 
