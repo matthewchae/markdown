@@ -109,3 +109,41 @@ Core dump 발생시키기
 
 /usr/local/syslog.log   persistent이다. core dump되면 여기에 로그가 남는다.
 
+<a name="find"></a>  
+### find
+
+find tmp | grep busybox | grep .config$
+
+find /ect/systemd/system/ -type d -name “want*”
+
+repo grep meson | grep inherit | grep meta-axis
+
+find /home/matthewc/project/q1656-dle3/q1656-dle/builds/q1656-dle/workspace/sources/busybox | grep defconf
+
+ls meta*/recipes*/*/*.bb | grep basic-device
+
+ls */ - List subdirectories in the current directory:
+
+find . -name “*.mp3” | xargs rm -rf
+
+Xargs가 pipe 이전의 명령 수행 결과 문자열을 그대로 rm으로 전달 해준다.
+
+근데 이 명령은 결과에 공백이나 줄바꿈 문자들이 있으면 그것들은 실행이 안된다.
+
+그래서 -print0를 추가하면 find 명령어에 의해 검색된 모든 검색 결과의 마지막에 널 문자를 넣어줌
+
+즉, mp3 뒤에 널이 추가됨. 그래서 파일의 시작과 끝을 구별할 수 있음.
+
+find . -name “*.mp3”  -print0 | xargs -0 rm -rf
+
+이렇게 하면 null 문자로 분리 된 검색 결과를 전달 받아서 
+
+Xarg가 분리 된 단어로 rm으로 전달 해 준다.
+
+Find 조건 -exec 실행시킬 명령어
+
+Find로 찾은것을 exec로 어떤 명령을 실행시켜라
+
+cat /etc/passwd | grep basic
+
+
