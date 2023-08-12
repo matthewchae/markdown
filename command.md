@@ -264,7 +264,9 @@ $ bitbake -e | grep ^KERNEL //KERNEL 에 연관된 변수 전체확인
 
 $ bitbake -e | grep ^IMAGE_INSTALL= 
 
+
 bitbake -e systemd | sed -n '/# .PACKAGECONFIG /,/^PACKAGECONFIG=/p' > 1  이렇게 하면 PACKAGECONFIG에 추가된거 다 볼 수 있다.
+
 
 이렇게 하면 dump.txt 에서 maintainer나 recipe같은걸 알 수 있다.
 
@@ -273,6 +275,7 @@ bitbake -e linux-axis-5.15-artpec8 > 1.txt
 bitbake -e foo > dump.txt
 
 grep '^PKGDEST=' dump.txt
+
 
 Package Name 과 Package Version을 기록하고, *.bb 와 *.bbappend 작성하며, *.bbappend 주로 확장하는 개념으로 주로 Patch할 때 사용한다.
 
