@@ -84,7 +84,7 @@ sshfs이용해서 ~/fractal에 마운트하기<br><br>
 sshfs christwo@10.92.172.87:/home/christwo/ ~/fractal -o nonempty<br><br> 
 
 scp로 파일 전송하기<br><br> 
-scp testfile root@192.168.123.123:/app/tmp/testdir<br><br> 
+&nbsp; &nbsp;&nbsp;&nbsp;->scp testfile root@192.168.123.123:/app/tmp/testdir<br><br> 
 scp로 파일 전송받기<br><br> 
 &nbsp; &nbsp;&nbsp;&nbsp;->Copy the perf.data from target using scp:<br><br> 
  &nbsp; &nbsp;&nbsp;&nbsp;-> scp root@192.168.0.90:/tmp/perf.data<br><br> 
