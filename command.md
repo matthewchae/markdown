@@ -75,3 +75,31 @@ dpkg -i /n/axis_releases/tools/netboot/debian/axis-netboot_3.36.1_amd64.deb
 
 sudo apt-get install axis-netboot
 
+
+<a name="ssh"></a>  
+### ssh
+
+Ssh enable하는 법
+http://192.168.0.90/axis-cgi/admin/param.cgi?action=update&Network.SSH.Enabled=yes
+192.168.0.90/axis-cgi/param.cgi?action=update&root.Network.SSH.Enabled=yes
+
+sshfs이용해서 ~/fractal에 마운트하기
+sshfs christwo@10.92.172.87:/home/christwo/ ~/fractal -o nonempty
+
+scp로 파일 전송하기
+scp testfile root@192.168.123.123:/app/tmp/testdir
+scp로 파일 전송받기
+   ->Copy the perf.data from target using scp:
+ -> scp root@192.168.0.90:/tmp/perf.data .
+
+
+사용자 변경
+su -s /usr/bin/sh sdk
+
+ssh-agent 문제일때
+   ssh-agent
+   eval $(ssh-agent)
+   ssh-add ~/.ssh/id_rsa 입력한다음에 비번인 chae2142입력
+
+netstat -ntl 이게 열려 있는 포트를 보여준다.
+
