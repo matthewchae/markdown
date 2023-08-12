@@ -1,17 +1,8 @@
 
-
-## 소개
-
-Github pages 블로그를 운영하는 중입니다. 회사라는 틀에 박혀 찍어내기식 프로그래밍에 지친 나머지 블로그에서만큼은 제가 하고 싶은 프로젝트를 진행하고 싶어 만들게 되었습니다. 
-* AI, Data Science 중독자입니다. 
-* 책을 읽고, 리뷰를 쓰고, 베타리딩 및 베타테스트에 참가하길 좋아합니다.
-* 소소하지만 살면서 얻은 깨달음이나, 개발자로서 경험하고 배웠던 것들을 공유할 예정이니 가끔 들려주시면 감사하겠습니다. :)
-
 [ssh](#ssh)
-[core_dump](#core-dump)
-[systemd](#systemd)
-[systemd1](#systemd1)
 
+[core_dump](#core_dump)
+ 
 [devtool,ffbuild](#devtool,ffbuild)
 
 [boot command](#boot_command)
@@ -102,4 +93,19 @@ ssh-agent 문제일때
    ssh-add ~/.ssh/id_rsa 입력한다음에 비번인 chae2142입력
 
 netstat -ntl 이게 열려 있는 포트를 보여준다.
+
+
+<a name="core_dump"></a>  
+### core dump
+
+Core dump 발생하는거 기다리고 있기.
+https://gittools.se.axis.com/gerrit/plugins/gitiles/apps/dbox/+/refs/heads/master/
+-> 옛날 버전에서는 하기 사용
+wget -T0 -O core 'http://root:pass@192.168.0.90/axis-cgi/debug/debug.cgi?listen'
+여기서 debug.cgi대신 debug.tgz 사용
+
+Core dump 발생시키기
+-> 타겟에서 dbox segfault하면 에러 발생
+
+/usr/local/syslog.log   persistent이다. core dump되면 여기에 로그가 남는다.
 
