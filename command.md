@@ -113,7 +113,8 @@ wget -T0 -O core 'http://root:pass@192.168.0.90/axis-cgi/debug/debug.cgi?listen'
 Core dump 발생시키기<br><br> 
 -> 타겟에서 dbox segfault하면 에러 발생<br><br> 
 
-/usr/local/syslog.log   persistent이다. core dump되면 여기에 로그가 남는다.
+/usr/local/syslog.log<br><br> 
+-> persistent이다. core dump되면 여기에 로그가 남는다.
 
 <a name="find"></a>  
 ### find
