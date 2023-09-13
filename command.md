@@ -18,6 +18,10 @@
 <a name="Linux"></a>  
 ### Linux
 
+< 놋불에서 워크스테이션의 localhost 접속 ><br><br> 
+socat tcp-listen:2063,reuseaddr,fork tcp:192.168.0.90:80& <br><br> 
+http://pc50906-2235:2063<br><br><br><br>
+
 netstat -ntl 이게 열려 있는 포트를 보여준다.<br><br> 
 
 < Obj dump해보기 ><br><br> 
