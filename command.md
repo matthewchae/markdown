@@ -22,6 +22,10 @@
 socat tcp-listen:2063,reuseaddr,fork tcp:192.168.0.90:80& <br><br> 
 http://pc50906-2235:2063<br><br><br><br>
 
+< 파일의 총 바이트 수를 출력 ><br><br> 
+wc -c /usr/local/log-confd/persist-info.log | cut -d ' ' -f1"<br><br> 
+wc 파일의 총 바이트 수를 출력 -c 옵션은 "바이트 수(count bytes)"를 출력하도록 하는 옵션입니다.<br><br>  
+
 netstat -ntl 이게 열려 있는 포트를 보여준다.<br><br> 
 
 < Obj dump해보기 ><br><br> 
