@@ -18,7 +18,7 @@
 <a name="Linux"></a>  
 ### Linux
 
-< 놋불에서 워크스테이션의 localhost 접속 ><br><br> 
+< 놋북에서 워크스테이션의 localhost 접속 ><br><br> 
 socat tcp-listen:2063,reuseaddr,fork tcp:192.168.0.90:80& <br><br> 
 http://pc50906-2235:2063<br><br><br><br>
 
