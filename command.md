@@ -25,6 +25,11 @@ http://pc50906-2235:2063<br><br><br><br>
 < 파일의 총 바이트 수를 출력 ><br><br> 
 wc -c /usr/local/log-confd/persist-info.log | cut -d ' ' -f1"<br><br> 
 wc 파일의 총 바이트 수를 출력 -c 옵션은 "바이트 수(count bytes)"를 출력하도록 하는 옵션입니다.<br><br>  
+wc -l /usr/local/log-confd/persist-info.log<br><br> 
+-l 이 옵션은 바이트 수 아니고 라인 수<br><br> 
+wc -c < /usr/local/log-confd/persist-info.log <br><br> 
+이렇게 < 를 사용하고 cut을 사용하지 않을 수도 있음. 하지만 < 는 속도가 느림  <br><br> 
+
 
 < 파일안에 특정 문자열의 존재 여부 ><br><br> 
 grep -q 'The test log for the test_enable_persist_info_log!!' /usr/local/log-confd/persist-info.log; echo $?  <br><br>  
