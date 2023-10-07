@@ -18,10 +18,6 @@
 <a name="Linux"></a>  
 ### Linux
 
-< 놋북에서 워크스테이션의 localhost 접속 ><br><br> 
-socat tcp-listen:2063,reuseaddr,fork tcp:192.168.0.90:80& <br><br> 
-http://pc50906-2235:2063<br><br><br><br>
-
 < 파일의 총 바이트 수를 출력 ><br><br> 
 wc -c /usr/local/log-confd/persist-info.log | cut -d ' ' -f1"<br><br> 
 wc 파일의 총 바이트 수를 출력 -c 옵션은 "바이트 수(count bytes)"를 출력하도록 하는 옵션입니다.<br><br>  
@@ -150,11 +146,16 @@ ssh enable하는 법<br><br>
 http://192.168.0.90/axis-cgi/admin/param.cgi?action=update&Network.SSH.Enabled=yes<br><br> 
 192.168.0.90/axis-cgi/param.cgi?action=update&root.Network.SSH.Enabled=yes<br><br> 
 
+< 놋북에서 워크스테이션의 localhost 접속 ><br><br> 
+socat tcp-listen:2063,reuseaddr,fork tcp:192.168.0.90:80& <br><br> 
+http://pc50906-2235:2063<br><br><br><br>
+
 sshfs이용해서 ~/fractal에 마운트하기<br><br> 
 sshfs christwo@10.92.172.87:/home/christwo/ ~/fractal -o nonempty<br><br> 
 
 scp로 파일 전송하기<br><br> 
 &nbsp; &nbsp;&nbsp;&nbsp;->scp testfile root@192.168.123.123:/app/tmp/testdir<br><br> 
+&nbsp; &nbsp;&nbsp;&nbsp; scp api-def-log_configuration-v1.yaml root@192.168.0.90:/tmp<br><br>
 scp로 파일 전송받기<br><br> 
 &nbsp; &nbsp;&nbsp;&nbsp;->Copy the perf.data from target using scp:<br><br> 
  &nbsp; &nbsp;&nbsp;&nbsp;-> scp root@192.168.0.90:/tmp/perf.data<br><br> 
