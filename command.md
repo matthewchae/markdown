@@ -78,6 +78,7 @@ cat /sys/class/devfreq/dlp_devfreq/cur_freq<br><br>
 cat /sys/kernel/debug/clk/clk_summary<br><br> 
 echo 92 > /sys/class/gpio/export<br><br>
 
+parhandclient set Network.SSH.enabled "yes"<br><br>
 
 <a name="devtool,ffbuild"></a>  
 ### devtool/ ffbuild
@@ -160,6 +161,7 @@ scp로 파일 전송받기<br><br>
 &nbsp; &nbsp;&nbsp;&nbsp;->Copy the perf.data from target using scp:<br><br> 
  &nbsp; &nbsp;&nbsp;&nbsp;-> scp root@192.168.0.90:/tmp/perf.data<br><br> 
 
+ssh root@device_ip busctl --system monitor | tee /tmp/test.log<br><br> 
 
 사용자 변경
 su -s /usr/bin/sh sdk
