@@ -173,6 +173,7 @@ ssh-agent 문제일때
 
 netstat -ntl 이게 열려 있는 포트를 보여준다.<br><br><br><br>
 
+http://192.168.0.90/axis-cgi/admin/param.cgi?action=update&Network.SSH.Enabled=yes<br><br><br><br>
 
 <a name="core_dump"></a>  
 ### core dump
