@@ -3,6 +3,8 @@
 
 [systemd](#systemd)
 
+[busctl](#busctl)
+
 [bitbake](#bitbake)
 
 [core_dump](#core_dump)
@@ -79,6 +81,49 @@ cat /sys/kernel/debug/clk/clk_summary<br><br>
 echo 92 > /sys/class/gpio/export<br><br>
 
 parhandclient set Network.SSH.enabled "yes"<br><br>
+
+
+<a name="busctl"></a>  
+### busctl
+
+먼저 해당 서비스를 찾아라.
+root@axis-00408c18888e:/etc/syslog-ng# busctl
+com.axis.RemoteSyslog1               - -               -                        (activatable) -                                -       -  
+이런 결과가 나오고 com.axis.RemoteSyslog1 이게 interface 이름이다.
+
+이제 해당 서비스의 object를 찾아라.
+root@axis-00408c18888e:/etc/syslog-ng# busctl tree com.axis.RemoteSyslog1
+└─/com
+  └─/com/axis
+    └─/com/axis/RemoteSyslog1
+
+/com/axis/RemoteSyslog1 이게 해당 object이다.
+
+이 서비스들이 어떤 method를 제공하는지 알아보자.
+busctl introspect com.axis.RemoteSyslog1 /com/axis/RemoteSyslog1
+                      서비스 네임               object 네임
+그러면 이런 결과가 나온다.
+NAME                                TYPE      SIGNATURE RESULT/VALUE                          FLAGS
+
+com.axis.RemoteSyslog1  interface  -         -                                     -
+.GetServers                       method    -         a(susss)                              -
+.GetStatus                         method    -         b                                     -
+.SetServers                       method    a(susss)  -                                     -
+.SetStatus                         method    b         -                                     -
+.TestServers                       method   -         -                                     -
+
+첫줄 com.axis.RemoteSyslog1  이게 interface이다. 우린 이걸 쓰면 된다.
+그리고 그 아래 GetServers, SetServers들이 method이다.
+3열에 해당하는 부분 SIGNATURE가 바로 이 method를 쓸때 필요한 argumet들이고 result 부분이 되돌려 받는 값이다.
+
+이것들을 조합해서 커맨드를 만들어 보자.
+busctl call com.axis.RemoteSyslog1 /com/axis/RemoteSyslog1 com.axis.RemoteSyslog1 GetServers 라고 명령을 치면 아래와 같이 나온다.
+a(susss) 1 "192.168.0.1" 514 "TCP" "RFC5424" "Debug"
+
+busctl call com.axis.RemoteSyslog1 /com/axis/RemoteSyslog1 com.axis.RemoteSyslog1 SetServers "a(susss)" 1 "192.168.0.1" 514 "TCP" "RFC5424" "Debug"
+이렇게 명령을 치면 된다.
+
+
 
 <a name="devtool,ffbuild"></a>  
 ### devtool/ ffbuild
