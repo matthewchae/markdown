@@ -85,6 +85,8 @@ parhandclient set Network.SSH.enabled "yes"<br><br>
 
 <a name="busctl"></a>  
 ### busctl 
+
+busctl monitor <br><br>
 <br><br>
 1. 먼저 해당 서비스를 찾아라.<br><br>
 root@axis-00408c18888e:/etc/syslog-ng# busctl<br><br>
