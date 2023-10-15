@@ -101,7 +101,7 @@ root@axis-00408c18888e:/etc/syslog-ng# busctl tree com.axis.RemoteSyslog1<br><br
 
 이 서비스들이 어떤 method를 제공하는지 알아보자.<br><br>
 busctl introspect com.axis.RemoteSyslog1 /com/axis/RemoteSyslog1<br><br>
-                      서비스 네임<br><br>               object 네임<br><br>
+                      서비스 네임               object 네임<br><br>
 
 첫줄 com.axis.RemoteSyslog1  이게 interface이다. 우린 이걸 쓰면 된다.<br><br>
 그리고 그 아래 GetServers, SetServers들이 method이다.<br><br>
