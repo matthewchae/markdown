@@ -186,8 +186,8 @@ http://192.168.0.90/axis-cgi/admin/param.cgi?action=update&Network.SSH.Enabled=y
 192.168.0.90/axis-cgi/param.cgi?action=update&root.Network.SSH.Enabled=yes<br><br> 
 
 < 놋북에서 워크스테이션의 localhost 접속 ><br><br> 
-socat tcp-listen:2063,reuseaddr,fork tcp:192.168.0.90:80& <br><br> 
-http://pc50906-2235:2063<br><br><br><br>
+socat tcp-listen:2063,reuseaddr,fork tcp:192.168.0.90:80& 이 명령을 workstation에서<br><br> 
+http://pc50906-2235:2063 <br><br><br><br>
 
 sshfs이용해서 ~/fractal에 마운트하기<br><br> 
 sshfs christwo@10.92.172.87:/home/christwo/ ~/fractal -o nonempty<br><br> 
